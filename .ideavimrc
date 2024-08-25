@@ -1,0 +1,226 @@
+""""""""""""""
+""" MOTION """
+""""""""""""""
+
+" left
+noremap j h
+
+" down
+noremap k j
+
+" up
+noremap l k
+
+" right
+noremap ; l
+
+""""""""""""
+""" MISC """
+""""""""""""
+
+" leader key
+let mapleader = ' '
+
+" move to the next character occurrence
+noremap ' ;
+
+" redo
+noremap U <C-r>
+
+" map black whole register
+noremap \ "_
+
+" paste over without overwriting default register
+xnoremap p P
+
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
+
+" jump between angle brackets
+set matchpairs+=<:>
+
+" smart line joining
+set ideajoin
+
+""""""""""""""
+""" CONFIG """
+""""""""""""""
+
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+
+" source config
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
+
+""""""""""""""
+""" SEARCH """
+""""""""""""""
+
+" case-insensitive search
+set ignorecase
+
+" enable case-sensitive search when uppercased letter is present
+set smartcase
+
+" search while typing
+set incsearch
+
+" highlight search results
+set hlsearch
+
+" remove search highlights
+noremap <Esc> :nohlsearch<CR>
+
+"""""""""""""""""""""""
+""" WORD NAVIGATION """
+"""""""""""""""""""""""
+
+" consider camelCase and snake_case words when jumping between words
+
+" move to the beginning of the next word
+map w [w
+
+" move to the end of the next word
+map e ]w
+
+" move to the beginning of the previous word
+map b [b
+
+" move to the end of the previous word
+map ge ]b
+
+""""""""""""""""""""""""
+""" SPLIT NAVIGATION """
+""""""""""""""""""""""""
+
+" go to the left split
+map <A-j> <C-w>h
+
+" go to the bottom split
+map <A-k> <C-w>j
+
+" go to the top split
+map <A-l> <C-w>k
+
+" go to the right split
+map <A-;> <C-w>l
+
+""""""""""""""
+""" SPLITS """
+""""""""""""""
+
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>ww <Action>(Unsplit)
+map <leader>wa <Action>(UnsplitAll)
+
+"""""""""""""""""""
+""" REFACTORING """
+"""""""""""""""""""
+
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rc <Action>(ExtractClass)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+""""""""""""""""""
+""" NAVIGATION """
+""""""""""""""""""
+
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sf <Action>(GotoFile)
+map <leader>sc <Action>(GotoClass)
+map <leader>sa <Action>(GotoAction)
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gy <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gt <Action>(GotoTest)
+map <leader>gl <Action>(GotoLine)
+map <leader>gm <Action>(GotoSuperMethod)
+
+""""""""""""""""""""""""""""""
+""" SOURCE CODE NAVIGATION """
+""""""""""""""""""""""""""""""
+
+map <leader>ug <action>(FindUsages)
+map <leader>uf <action>(FindUsagesInFile)
+map <leader>uu <Action>(ShowUsages)
+map <leader>vs <Action>(ViewSource)
+map <leader>im <Action>(QuickImplementations)
+map <leader>oo <Action>(FileStructurePopup)
+map <leader>td <Action>(QuickTypeDefinition)
+map <leader>ti <Action>(ExpressionTypeInfo)
+map <leader>sh <action>(ShowHoverInfo)
+
+""""""""""""""""""""""""
+""" FIND AND REPLACE """
+""""""""""""""""""""""""
+
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <leader>ff <Action>(FindInPath)
+map <leader>fr <Action>(ReplaceInPath)
+map <leader>se <Action>(SelectAllOccurrences)
+
+"""""""""""""""
+""" JUMPING """
+"""""""""""""""
+
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
+map <leader>lc <Action>(JumpToLastChange)
+map <leader>ll <action>(RecentLocations)
+map <C-;> <Action>(RecentFiles)
+map <S-k> <Action>(Forward)
+map <S-l> <Action>(Back)
+map <A-[> <Action>(MethodUp)
+map <A-]> <Action>(MethodDown)
+" [{ or ]} works in the same way
+"map <leader>gs <Action>(EditorCodeBlockStart)
+"map <leader>ge <Action>(EditorCodeBlockEnd)
+"map <leader>nn <Action>(NextTab)
+"map <leader>pp <Action>(PreviousTab)
+
+"""""""""""""""
+""" EDITING """
+"""""""""""""""
+
+map <leader>aa <action>(ShowIntentionActions)
+map <leader>sw <Action>(SurroundWith)
+map <S-space> <Action>(Generate)
+map <S-k> <Action>(EditorDuplicateLines)
+map <C-[> <Action>(EditorCompleteStatement)
+imap <C-h> <Action>(CodeCompletion)
+
+""""""""""""""""""
+""" CODE STYLE """
+""""""""""""""""""
+
+map <leader><leader> <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
+map <leader>cl <Action>(CodeCleanup)
+
+""""""""""""
+""" MISC """
+""""""""""""
+
+map <C-k> <action>(MoveLineDown)
+map <C-l> <action>(MoveLineUp)
+map <C-i> <action>(MoveStatementDown)
+map <C-o> <action>(MoveStatementUp)
+map <leader>fs <action>(NewScratchFile)
+map <leader>qq <action>(CloseContent)
+map <leader>qa <action>(CloseAllEditors)
+map <leader>nf <action>(NewFile)
+map <leader>nd <action>(NewDir)
+map <leader>re <action>(RenameFile)
+map <leader>of <action>(OpenFile)
+map <leader>ri <action>(RestartIde)
+
+map <leader>ca <Action>(CopyAbsolutePath)
+map <leader>cn <Action>(CopyFileName)
+map <leader>cp <Action>(CopyContentRootPath)
