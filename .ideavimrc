@@ -1,0 +1,15 @@
+" leader key
+let mapleader = ' '
+
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+
+" source config
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
+
+" easymotion plugin
+set easymotion
+
+map <leader>m <plug>(easymotion-prefix)
+
+nmap s <plug>(easymotion-s)
