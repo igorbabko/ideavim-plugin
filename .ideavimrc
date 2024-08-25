@@ -1,0 +1,17 @@
+" left
+noremap j h
+
+" down
+noremap k j
+
+" up
+noremap l k
+
+" right
+noremap ; l
+
+" move to the next character occurrence
+noremap ' ;
+
+" redo
+noremap U <C-r>
