@@ -105,3 +105,8 @@ map <leader>td <Action>(QuickTypeDefinition)
 map <leader>ti <Action>(ExpressionTypeInfo)
 map <leader>sh <Action>(ShowHoverInfo)
 map <leader>oo <Action>(FileStructurePopup)
+
+map <S-f> <Action>(Find)
+map <S-r> <Action>(Replace)
+map <leader>ff <Action>(FindInPath)
+map <leader>fr <Action>(ReplaceInPath)
