@@ -10,6 +10,9 @@ noremap l k
 " right
 noremap ; l
 
+" leader key
+let mapleader = ' '
+
 " move to the next character occurrence
 noremap ' ;
 
@@ -30,3 +33,9 @@ set matchpairs+=<:>
 
 " smart line joining
 set ideajoin
+
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+
+" source config
+noremap <leader>cs :source ~/.ideavimrc<cr>
