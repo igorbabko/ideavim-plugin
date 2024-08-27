@@ -44,7 +44,7 @@ noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
 set hlsearch
 
 " remove search highlights
-noremap <Esc> :nohlsearch<cr>
+nnoremap <Esc> :nohlsearch<cr>
 
 " case-insensitive search
 set ignorecase
@@ -96,3 +96,12 @@ map <leader>gi <Action>(GotoImplementation)
 map <leader>gt <Action>(GotoTest)
 map <leader>gm <Action>(GotoSuperMethod)
 map <leader>gl <Action>(GotoLine)
+
+map <leader>ug <Action>(FindUsages)
+map <leader>uu <Action>(ShowUsages)
+map <leader>vs <Action>(ViewSource)
+map <leader>im <Action>(QuickImplementations)
+map <leader>td <Action>(QuickTypeDefinition)
+map <leader>ti <Action>(ExpressionTypeInfo)
+map <leader>sh <Action>(ShowHoverInfo)
+map <leader>oo <Action>(FileStructurePopup)
