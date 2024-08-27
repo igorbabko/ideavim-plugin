@@ -39,3 +39,18 @@ noremap <leader>cc :edit ~/.ideavimrc<cr>
 
 " source config
 noremap <leader>cs :source ~/.ideavimrc<cr>
+
+" highlight search results
+set hlsearch
+
+" remove search highlights
+noremap <Esc> :nohlsearch<cr>
+
+" case-insensitive search
+set ignorecase
+
+" enable case-sensitive search when uppercased letter is present
+set smartcase
+
+" search while typing
+set incsearch
