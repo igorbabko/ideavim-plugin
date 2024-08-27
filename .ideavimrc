@@ -38,7 +38,7 @@ set ideajoin
 noremap <leader>cc :edit ~/.ideavimrc<cr>
 
 " source config
-noremap <leader>cs :source ~/.ideavimrc<cr>
+noremap <leader>cs :source ~/.ideavimrc<cr>:nohlsearch<cr>
 
 " highlight search results
 set hlsearch
@@ -54,3 +54,17 @@ set smartcase
 
 " search while typing
 set incsearch
+
+" consider camelCase and snake_case words when jumping between words
+
+" move to the beginning of the next word
+map w [w
+
+" move to the end of the next word
+map e ]w
+
+" move to the beginning of the previous word
+map b [b
+
+" move to the end of the previous word
+map ge ]b
