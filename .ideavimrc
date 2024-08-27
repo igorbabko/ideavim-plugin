@@ -68,3 +68,20 @@ map b [b
 
 " move to the end of the previous word
 map ge ]b
+
+" go to the left split
+map <A-j> <C-w>h
+
+" go to the bottom split
+map <A-k> <C-w>j
+
+" go to the top split
+map <A-l> <C-w>k
+
+" go to the right split
+map <A-;> <C-w>l
+
+map <leader>wv <Action>(SplitVertically)
+map <leader>wh <Action>(SplitHorizontally)
+map <leader>ww <Action>(Unsplit)
+map <leader>wa <Action>(UnsplitAll)
