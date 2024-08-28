@@ -133,3 +133,7 @@ map <S-k> <Action>(Forward)
 map <S-l> <Action>(Back)
 map <A-[> <Action>(MethodUp)
 map <A-]> <Action>(MethodDown)
+
+map <leader><leader> <Action>(ReformatCode)
+map <leader>oi <Action>(OptimizeImports)
+map <leader>ra <Action>(RearrangeCode)
